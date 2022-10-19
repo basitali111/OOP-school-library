@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require './person'
+
 # This shiny device polishes bared foos
 class Teacher < Person
   attr_accessor :specialization
