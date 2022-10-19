@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-# Adding person class
-class Person
+class Person # rubocop:todo Style/Documentation
   attr_reader :id
   attr_accessor :name, :age
 
