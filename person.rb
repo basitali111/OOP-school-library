@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This shiny device polishes bared foos
 class Person
   attr_reader :id
   attr_accessor :name, :age
