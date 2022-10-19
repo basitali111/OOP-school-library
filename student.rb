@@ -1,5 +1,3 @@
-
-
 require './person'
 
 # Adiing student class
