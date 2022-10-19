@@ -1,4 +1,3 @@
-
 require './person'
 
 # This shiny device polishes bared foos
