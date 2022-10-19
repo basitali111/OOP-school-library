@@ -1,75 +1,39 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+school-library
+An app to record what books are in a library and who borrows them. It allows to add new students, teachers or new books. Save records of who borrowed a given book and when.
 
-# Project Name
-
-> Description the project.
-
-
-## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
+Built With
+Ruby
+Getting Started
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+Prerequisites
+Ruby
+Install
+Go to the terminal and cd into the directory of your preference.
+Run git clone githttps://github.com/basitali111/OOP-school-library.git to clone the app.
+Open the project in a code editor of your choice that is configured to use Ruby.
+Run ruby filename.rb to exectue any of the ruby files
+Authors
+👤 Author1
 
-### Setup
+👤 **Basit Ali**
 
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-## 🤝 Contributing
+- GitHub: [@githubhandle](https://github.com/basitali111)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/basit-ali-jobs/)
+- Twitter: [Twitter](https://twitter.com/BasitAl35031734)
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the issues page.
 
-## Show your support
-
+Show your support
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+Acknowledgments
+Hat tip to anyone whose code was used
+Inspiration
+etc
+📝 License
+This project is MIT licensed.
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+NOTE: we recommend using the MIT license - you can set it up quickly by using templates available on GitHub. You can also use any other license if you wish.
