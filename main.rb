@@ -1,3 +1,4 @@
+require './start'
 
 def main
   app = App.new
