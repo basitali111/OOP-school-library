@@ -1,7 +1,7 @@
 require './start'
 
 def main
-  app = App.new
+  start = Start.new
   puts 'Welcome to our school library'
   loop do
     puts 'Please choose an option by entering a number:'
@@ -17,7 +17,7 @@ def main
       puts 'Thank you for using our library'
       break
     end
-    start_app(app, selection)
+    start.start_app(selection)
   end
 end
 
