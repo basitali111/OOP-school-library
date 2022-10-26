@@ -2,14 +2,19 @@ require './student'
 require './teacher'
 require './rental'
 require './modules/books_module'
+require 'json'
 
 class App
   attr_accessor :books, :people, :rentals
 
   def initialize
     @books = BooksModule.new
-    @people = []
     @rentals = []
+    @file_location = 'storage/persons.json'
+    file = File.open(@file_location)
+    @people = file.size.zero? ? [] : JSON.parse(file.read)
+    file.close
+
   end
 
   # list all people
@@ -18,7 +23,7 @@ class App
       puts 'Sorry, the people list is currently empty'
     else
       @people.each do |person|
-        puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+        puts "[#{person['json_class']}] Name: #{person['name']}, ID: #{person['id']}, Age: #{person['age']}"
       end
     end
   end
@@ -55,7 +60,14 @@ class App
     end
 
     student = Student.new(age, name, parent_permission)
+   
+    student = student.to_Json
     @people.push(student)
+
+    file = File.open(@file_location,'w')
+    file.write(JSON[@people])
+    file.close
+
     puts 'Person created successfully '
   end
 
