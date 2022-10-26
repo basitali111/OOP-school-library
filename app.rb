@@ -1,3 +1,4 @@
+require 'json'
 require './student'
 require './teacher'
 require './book'
@@ -7,7 +8,12 @@ class App
   attr_accessor :books, :people, :rentals
 
   def initialize
-    @books = []
+    # books
+    @file_location = 'storage/books.json'
+    file = File.open(@file_location)
+    @books = file.size.zero? ? [] : JSON.parse(file.read)
+    file.close
+
     @people = []
     @rentals = []
   end
@@ -90,7 +96,16 @@ class App
     print 'Author: '
     author = gets.chomp
     book = Book.new(title, author)
+
+    # store book to the array
+    book = book.to_json
     @books.push(book)
+
+    # store to file
+    file = File.open(@file_location, 'w')
+    file.write(JSON[@books])
+    file.close
+
     puts 'Book created successfully'
   end
 
