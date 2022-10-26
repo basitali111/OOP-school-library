@@ -16,9 +16,9 @@ class Start
     when 4
       @app.books.create_book
     when 5
-      @app.create_rental
+      @app.rentals.create_rental
     when 6
-      @app.list_all_rentals
+      @app.rentals.list_all_rentals
     else
       puts 'Kindly select from 1 to 6 only'
     end

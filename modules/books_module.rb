@@ -2,7 +2,7 @@ require './book'
 require 'json'
 
 class BooksModule
-  attr_reader :file_location
+  attr_reader :file_location, :books
 
   def initialize
     @file_location = 'storage/books.json'

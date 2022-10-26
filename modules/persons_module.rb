@@ -3,7 +3,7 @@ require 'json'
 require './teacher'
 
 class PersonsModule
-  attr_reader :file_location
+  attr_reader :file_location, :people
 
   def initialize
     @file_location = 'storage/persons.json'

@@ -1,0 +1,18 @@
+[
+  {
+    "json_class": "Rental",
+    "date": "04-12-22",
+    "person": {
+      "json_class": "Teacher",
+      "id": 350,
+      "age": 34,
+      "name": "Dennis Mprah",
+      "specialization": "Arts"
+    },
+    "book": {
+      "json_class": "Book",
+      "title": "Mary Ann",
+      "author": "Tracey Kadenyi"
+    }
+  }
+]
