@@ -63,7 +63,7 @@ class RentalsModule
 
         @rentals.each do |rental|
           if rental['person']['id'] == person_id
-            puts " \n Rentals: \n Date: #{rental['date']}, Book \"#{rental['book']['title']}\" by #{rental['book']['author']}"
+            puts " \n Rentals: \n Date: #{rental['date']}, Book \"#{rental['book']['title']}\" by ['author']"
           end
         end
       end
