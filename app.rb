@@ -1,32 +1,15 @@
-require 'json'
 require './student'
 require './teacher'
-require './book'
 require './rental'
+require './modules/books_module'
 
 class App
   attr_accessor :books, :people, :rentals
 
   def initialize
-    # books
-    @file_location = 'storage/books.json'
-    file = File.open(@file_location)
-    @books = file.size.zero? ? [] : JSON.parse(file.read)
-    file.close
-
+    @books = BooksModule.new
     @people = []
     @rentals = []
-  end
-
-  # list all books
-  def list_all_books
-    if @books.empty?
-      puts 'Sorry, the books list is currently empty'
-    else
-      @books.each do |book|
-        puts "Tilte: \"#{book.title}\", Author: #{book.author}"
-      end
-    end
   end
 
   # list all people
@@ -89,25 +72,6 @@ class App
     puts 'Person created successfully'
   end
 
-  # create book
-  def create_book
-    print 'Title: '
-    title = gets.chomp
-    print 'Author: '
-    author = gets.chomp
-    book = Book.new(title, author)
-
-    # store book to the array
-    book = book.to_json
-    @books.push(book)
-
-    # store to file
-    file = File.open(@file_location, 'w')
-    file.write(JSON[@books])
-    file.close
-
-    puts 'Book created successfully'
-  end
 
   # create rental
   def create_rental
