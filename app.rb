@@ -1,4 +1,3 @@
-require './teacher'
 require './rental'
 require './modules/books_module'
 require './modules/persons_module'
@@ -10,19 +9,6 @@ class App
     @books = BooksModule.new
     @people = PersonsModule.new
     @rentals = []
-  end
-
-  # create teacher
-  def create_teacher
-    print 'Age: '
-    age = gets.chomp.to_i
-    print 'Name: '
-    name = gets.chomp
-    print 'Specialization: '
-    specialization = gets.chomp
-    teacher = Teacher.new(age, name, specialization)
-    @people.push(teacher)
-    puts 'Person created successfully'
   end
 
   # create rental

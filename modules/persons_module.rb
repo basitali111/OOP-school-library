@@ -1,5 +1,7 @@
 require './student'
-require 'Json'
+require 'json'
+require './teacher'
+
 class PersonsModule
   attr_reader :file_location
 
@@ -65,5 +67,20 @@ class PersonsModule
         puts "[#{person['json_class']}] Name: #{person['name']}, ID: #{person['id']}, Age: #{person['age']}"
       end
     end
+  end
+
+  # create teacher
+  def create_teacher
+    print 'Age: '
+    age = gets.chomp.to_i
+    print 'Name: '
+    name = gets.chomp
+    print 'Specialization: '
+    specialization = gets.chomp
+    teacher = Teacher.new(age, name, specialization)
+
+    store_person(teacher)
+
+    puts 'Person created successfully'
   end
 end
