@@ -10,9 +10,9 @@ class Start
     when 1
       @app.books.list_all_books
     when 2
-      @app.list_all_people
+      @app.people.list_all_people
     when 3
-      @app.create_person
+      @app.people.create_person
     when 4
       @app.books.create_book
     when 5

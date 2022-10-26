@@ -1,74 +1,15 @@
-require './student'
 require './teacher'
 require './rental'
 require './modules/books_module'
-require 'json'
+require './modules/persons_module'
 
 class App
   attr_accessor :books, :people, :rentals
 
   def initialize
     @books = BooksModule.new
+    @people = PersonsModule.new
     @rentals = []
-    @file_location = 'storage/persons.json'
-    file = File.open(@file_location)
-    @people = file.size.zero? ? [] : JSON.parse(file.read)
-    file.close
-
-  end
-
-  # list all people
-  def list_all_people
-    if @people.empty?
-      puts 'Sorry, the people list is currently empty'
-    else
-      @people.each do |person|
-        puts "[#{person['json_class']}] Name: #{person['name']}, ID: #{person['id']}, Age: #{person['age']}"
-      end
-    end
-  end
-
-  # create a person
-  def create_person
-    puts 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
-    selected_number = gets.chomp.to_i
-    case selected_number
-    when 1
-      create_student
-    when 2
-      create_teacher
-    else
-      puts 'Kindly select either 1 or 2 only'
-    end
-  end
-
-  # create student
-  def create_student
-    print 'Age: '
-    age = gets.chomp.to_i
-    print 'Name: '
-    name = gets.chomp
-    print 'Has parent permission? [Y/N]: '
-    parent_permission = gets.chomp.capitalize
-    case parent_permission
-    when 'Y'
-      parent_permission = true
-    when 'N'
-      parent_permission = false
-    else
-      puts 'Kindly enter either Y or N only'
-    end
-
-    student = Student.new(age, name, parent_permission)
-   
-    student = student.to_Json
-    @people.push(student)
-
-    file = File.open(@file_location,'w')
-    file.write(JSON[@people])
-    file.close
-
-    puts 'Person created successfully '
   end
 
   # create teacher
@@ -83,7 +24,6 @@ class App
     @people.push(teacher)
     puts 'Person created successfully'
   end
-
 
   # create rental
   def create_rental
