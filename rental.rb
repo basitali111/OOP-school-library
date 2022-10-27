@@ -6,7 +6,16 @@ class Rental
     @person = person
     @book = book
 
-    book.rentals.push(self)
-    person.rentals.push(self)
+    # book.rentals.push(self)
+    # person.rentals.push(self)
+  end
+
+  def to_json(*_args)
+    {
+      JSON.create_id => self.class.name,
+      'date' => @date,
+      'book' => @book,
+      'person' => @person
+    }
   end
 end

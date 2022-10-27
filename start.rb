@@ -8,17 +8,17 @@ class Start
   def start_app(selection)
     case selection
     when 1
-      @app.list_all_books
+      @app.books.list_all_books
     when 2
-      @app.list_all_people
+      @app.people.list_all_people
     when 3
-      @app.create_person
+      @app.people.create_person
     when 4
-      @app.create_book
+      @app.books.create_book
     when 5
-      @app.create_rental
+      @app.rentals.create_rental
     when 6
-      @app.list_all_rentals
+      @app.rentals.list_all_rentals
     else
       puts 'Kindly select from 1 to 6 only'
     end
