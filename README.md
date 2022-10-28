@@ -19,6 +19,11 @@ To get a local copy up and running follow these simple example steps.
 3. Open the project in a code editor of your choice that is configured to use Ruby.
 4. Run `ruby main.rb` to start the app
 
+### Run tests
+1. Run `gem install rspec` to install the `RSpec testing framework`
+2. Run `rspec spec` to test all the test files at once
+3. Run `rspec spec/name_of_test_file.rb` to test a particular file
+
 ## Authors
 
 👤 **Basit Ali**
