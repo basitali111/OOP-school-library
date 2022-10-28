@@ -3,17 +3,28 @@ An app to record what books are in a library and who borrows them. It allows to 
 
 ## Built With
 Ruby
+
 ## Getting Started
+
 To get a local copy up and running follow these simple example steps.
 
-## Prerequisites
-Ruby
-## Install
-Go to the terminal and cd into the directory of your preference.
-Run git clone githttps://github.com/basitali111/OOP-school-library.git to clone the app.
-Open the project in a code editor of your choice that is configured to use Ruby.
-Run ruby filename.rb to exectue any of the ruby files
+### Prerequisites
 
+- Ruby
+
+### Install
+
+1. Go to the terminal and `cd` into the directory of your preference.
+2. Run `git clone git@github.com:basitali111/OOP-school-library.git` to clone the app.
+3. Open the project in a code editor of your choice that is configured to use Ruby.
+4. Run `ruby main.rb` to start the app
+
+### Run tests
+1. Run `gem install rspec` to install the `RSpec testing framework`
+2. Run `rspec spec` to test all the test files at once
+3. Run `rspec spec/name_of_test_file.rb` to test a particular file
+
+## Authors
 
 👤 **Basit Ali**
 
@@ -21,9 +32,15 @@ Run ruby filename.rb to exectue any of the ruby files
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/basit-ali-jobs/)
 - Twitter: [Twitter](https://twitter.com/BasitAl35031734)
 
+👤 **Alphayo Wakarindi**
+
+- GitHub: [@githubhandle](https://github.com/alphayowakarindi)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/alphayo-wakarindi-15a825236/)
+- Twitter [Twitter](https://twitter.com/alphayowakarind)
+
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the issues page.
+Feel free to check the [issues page](https://github.com/basitali111/OOP-school-library/issues).
 
 ## Show your support
 Give a ⭐️ if you like this project!
